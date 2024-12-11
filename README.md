@@ -2,15 +2,25 @@
 
 Console History é um projeto web desenvolvido em ASP.NET Core que apresenta uma linha do tempo interativa sobre a evolução das consolas de videogame das principais plataformas: PlayStation, Nintendo e Xbox. Este projeto tem como objetivo fornecer uma visão geral das consolas, suas funcionalidades e como eles impactaram o mundo dos games ao longo dos anos.
 
+![Tela Inicial](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Home.png)
+
+![Jogo em destaque](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Em%20Destaque.png)
+
 ---
 
 ## Principais funcionalidades:
 
 - Plataformas e Consolas: O projeto exibe informações detalhadas sobre plataformas como PlayStation, Nintendo e Xbox, além de listar suas consolas, incluindo imagens, descrições e dados históricos.
 
-- Evolução dos Consolas: Por meio de uma apresentação em estilo carrossel, os usuários podem explorar as consolas lançados para cada plataforma ao longo do tempo, visualizando informações sobre cada modelo.
+![Nintendo](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Nintendo.png)
+
+- Evolução dos Consolas: Por meio de uma apresentação em estilo carrossel, os utilizadores podem explorar as consolas lançados para cada plataforma ao longo do tempo, visualizando informações sobre cada modelo.
+
+![SNES](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/SNES.png)
 
 - The Game Awards 2024: A página também conta com uma seção dedicada ao The Game Awards, incluindo informações sobre o evento, seus fundadores e o impacto que ele teve na indústria de games, além dos jogos indicados ao prêmio de Jogo do Ano de 2024.
+
+![TGA](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/The%20Game%20Awards.png)
 
 ---
 
@@ -102,15 +112,25 @@ Este projeto foi desenvolvido como parte de uma iniciativa para aprender sobre A
 
 Console History is a web project developed in ASP.NET Core that presents an interactive timeline about the evolution of video game consoles from the main platforms: PlayStation, Nintendo and Xbox. This project aims to provide an overview of the consoles, their features and how they have impacted the gaming world over the years.
 
+![Home Screen](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Home.png)
+
+![Featured Game](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Em%20Destaque.png)
+
 ---
 
 ## Main features:
 
 - Platforms and Consoles: The project displays detailed information about platforms such as PlayStation, Nintendo and Xbox, in addition to listing their consoles, including images, descriptions and historical data.
 
+![Nintendo](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/Nintendo.png)
+
 - Evolution of Consoles: Through a carousel-style presentation, users can explore the consoles released for each platform over time, viewing information about each model.
 
+![SNES](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/SNES.png)
+
 - The Game Awards 2024: The page also has a section dedicated to The Game Awards, including information about the event, its founders and the impact it has had on the gaming industry, as well as the games nominated for the 2024 Game of the Year award.
+
+![TGA](https://github.com/BeCrista/Gaming_History/blob/99079928451be199368c008ff61eb7aaddadef4e/Images/The%20Game%20Awards.png)
 
 ---
 
