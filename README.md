@@ -37,12 +37,6 @@ git clone https://github.com/your-user/Console-History.git
 
 ---
 
-## Objetivo do projeto:
-
-Este projeto foi desenvolvido como parte de uma iniciativa para aprender sobre ASP.NET Core, MVC e como trabalhar com dados dinâmicos em um aplicativo da web. Ele também serve como um portfólio para demonstrar habilidades em design responsivo e integração de informações de diferentes fontes.
-
----
-
 ## Como Configurar o Projeto
 
 Siga as instruções abaixo para configurar o projeto e restaurar a base de dados.
@@ -96,6 +90,14 @@ Siga as instruções abaixo para configurar o projeto e restaurar a base de dado
   dotnet watch run
 ```
 
+---
+
+## Objetivo do projeto:
+
+Este projeto foi desenvolvido como parte de uma iniciativa para aprender sobre ASP.NET Core, MVC e como trabalhar com dados dinâmicos em um aplicativo da web. Ele também serve como um portfólio para demonstrar habilidades em design responsivo e integração de informações de diferentes fontes.
+
+---
+ 
 ##  🇺🇸 : Console History
 
 Console History is a web project developed in ASP.NET Core that presents an interactive timeline about the evolution of video game consoles from the main platforms: PlayStation, Nintendo and Xbox. This project aims to provide an overview of the consoles, their features and how they have impacted the gaming world over the years.
