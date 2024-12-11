@@ -1,0 +1,129 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* O conteúdo principal ocupará o espaço restante */
+}
+
+
+/* Navbar */
+.navbar-brand img {
+    max-height: 150px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107; /* Destaque para o item ativo */
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid #ffc107;
+}
+
+    footer a {
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #ffc107;
+        }
+
+/* Aumentar a altura máxima das imagens no carousel */
+.carousel-item img {
+    max-height: 1850px;
+    object-fit: cover;
+    border-radius: 20px; /* Adicionar bordas arredondadas para um visual moderno */
+}
+
+
+/* Ajustar títulos e cores */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Estilizar a descrição com borda */
+.bg-light {
+    border-left: 5px solid #007bff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adicionar sombra para destacar */
+}
+
+/* Estilizar os ícones de plataformas */
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #007bff;
+    transition: transform 0.4s;
+}
+
+    .rounded-circle:hover {
+        transform: scale(1.060);
+        border-color: #ffc107;
+    }
+
+/* Alinhar as legendas do carousel */
+.carousel-caption {
+    position: static; /* Remove a posição sobreposta */
+    margin-top: 20px; /* Espaçamento abaixo da imagem */
+    text-align: center;
+}
+
+    .carousel-caption img {
+        width: 200px; /* Tamanho reduzido para as logos */
+        margin: 5px auto; /* Centraliza as logos */
+    }
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+/* Estilo para os botões de controle do carousel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border-radius: 50%; /* Botões arredondados (opcional) */
+}
+
+    .carousel-control-prev-icon::after,
+    .carousel-control-next-icon::after {
+        color: white; /* Cor da seta */
+        font-size: 24px; /* Tamanho da seta */
+    }
+

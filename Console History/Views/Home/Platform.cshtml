@@ -1,0 +1,58 @@
+﻿@model Console_History.Models.Platform
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container mt-5">
+    <!-- Introdução -->
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h1 class="display-5 fw-bold">@Model.Name</h1>
+            <p class="lead">@Model.Description</p>
+        </div>
+    </div>
+
+    <!-- Carousel dos Consoles -->
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center mb-4">Consolas desta plataforma</h2>
+            <div id="consoleCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @if (Model.platformConsoles != null && Model.platformConsoles.Any())
+                    {
+                        var first = true;
+                        foreach (var platformConsole in Model.platformConsoles)
+                        {
+                            var console = platformConsole.Console;
+                            <div class="carousel-item @(first ? "active" : "")">
+                                <img src="@console.ImageConsole" class="d-block w-100" alt="@console.NameConsole">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-2">
+                                    <h3>@console.NameConsole</h3>
+                                    <p>@console.DescriptionConsole</p>
+                                </div>
+                            </div>
+                            first = false;
+                        }
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#consoleCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#consoleCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão para voltar -->
+    <div class="row mt-5">
+        <div class="col text-center">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Voltar à Página Inicial</a>
+        </div>
+    </div>
+</div>
+

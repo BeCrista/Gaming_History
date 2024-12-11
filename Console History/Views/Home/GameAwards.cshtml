@@ -1,0 +1,90 @@
+﻿@model Console_History.Models.ViewModels.GameAwardsVM
+
+@{
+    ViewData["Title"] = "The Game Awards";
+}
+
+<div class="container mt-4">
+    <!-- Título Principal -->
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-4 fw-bold">The Game Awards</h1>
+        </div>
+    </div>
+
+    <!-- Descrição do The Game Awards -->
+    <div class="row mt-5">
+        <div class="col">
+            <div class="bg-light p-4 rounded">
+                <h2 class="text-center">Um pouco sobre o The Game Awards</h2>
+                @if (Model.GameAwards != null && Model.GameAwards.Any())
+                {
+                    <p class="text-justify">
+                        @Model.GameAwards.FirstOrDefault()?.Description
+                    </p>
+                }
+                else
+                {
+                    <p class="text-justify text-danger">Informações não disponíveis no momento.</p>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Nomeados para GOTY -->
+    <div class="row mt-5">
+        <div class="col text-center">
+            <h3>Os nomeados para o Game Of The Year ou GOTY são:</h3>
+        </div>
+    </div>
+
+    <!-- Carousel de Nomeados -->
+    <div class="row mt-4">
+        <div class="col">
+            <div id="gotyCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @if (Model.GameAwardsSlider != null && Model.GameAwardsSlider.Any())
+                    {
+                        var first = true;
+                        foreach (var game in Model.GameAwardsSlider)
+                        {
+                            <div class="carousel-item @(first ? "active" : "")">
+                                <img src="@game.ImageGOTY" class="d-block w-100" alt="@game.NameGOTY">
+                                <div class="carousel-caption bg-dark bg-opacity-75 rounded p-3">
+                                    <h5>@game.NameGOTY</h5>
+                                    <p>@game.PublisherGOTY</p>
+                                    <p>@game.DescriptionGOTY</p>
+                                </div>
+                            </div>
+                            first = false;
+                        }
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#gotyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#gotyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pergunta interativa -->
+    <div class="row mt-5 text-center">
+        <div class="col">
+            <h4>Então, qual destes você acha que vai ganhar?</h4>
+        </div>
+    </div>
+
+    <!-- Botão de Retorno -->
+    <div class="row mt-4 text-center">
+        <div class="col">
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+                Voltar para a página inicial
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model List<Platform>
+
+@{
+    ViewData["Title"] = "Busca";
+}
+
+<h2>Resultados da Busca</h2>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <p>@ViewBag.Message</p>
+}
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var platform in Model)
+        {
+            <li>
+                <a asp-action="Platform" asp-route-id="@platform.ID">@platform.Name</a>
+            </li>
+        }
+    </ul>
+}

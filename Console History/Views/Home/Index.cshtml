@@ -1,0 +1,89 @@
+﻿@model Console_History.Models.ViewModels.HomePageVM
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-4">
+    <!-- Introdução -->
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-5 fw-bold">Introdução ao meu portal de games</h1>
+            <p class="lead">@Model.HomePage.FirstOrDefault()?.Introduction</p>
+        </div>
+    </div>
+
+    <!-- Descrição -->
+    <div class="row mt-4">
+        <div class="col">
+            <div class="bg-light p-4 rounded">
+                <h2 class="text-center">Um Resumo da História dos Videogames</h2>
+                <p class="text-justify">
+                    @Model.HomePage.FirstOrDefault()?.Description
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="row mt-5">
+        <div class="col">
+            <h2 class="text-center mb-4">Jogos de Destaque</h2>
+            <div id="gamesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @if (Model.SliderGames != null && Model.SliderGames.Any())
+                    {
+                        var first = true;
+                        foreach (var game in Model.SliderGames)
+                        {
+                            <div class="carousel-item @(first ? "active" : "")">
+                                <img src="@game.ImageGame" class="d-block w-100" alt="@game.NameGame">
+                                <div class="carousel-caption">
+                                    <img src="@game.GameConsole" alt="Logo Console">
+                                </div>
+                            </div>
+                            first = false;
+                        }
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#gamesCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#gamesCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pergunta chamativa -->
+    <div class="row mt-5 text-center">
+        <div class="col">
+            <h3>Qual plataforma você quer conhecer?</h3>
+        </div>
+    </div>
+
+    <!-- Links das plataformas -->
+    <div class="row mt-4 text-center">
+        <div class="col-md-4">
+            <a asp-controller="Home" asp-action="Platform" asp-route-id="1" >
+                <img src="~/Images/PlayStation.png" class="rounded-circle img-fluid" alt="PlayStation" />
+            </a>
+            <p>Conheça a história do PlayStation</p>
+        </div>
+        <div class="col-md-4">
+            <a asp-controller="Home" asp-action="Platform" asp-route-id="2">
+                <img src="~/Images/Nintendo.png" class="rounded-circle img-fluid" alt="Nintendo" />
+            </a>
+            <p>Conheça a história da Nintendo</p>
+        </div>
+        <div class="col-md-4">
+            <a asp-controller="Home" asp-action="Platform" asp-route-id="3">
+                <img src="~/Images/Xbox.png" class="rounded-circle img-fluid" alt="Xbox" />
+            </a>
+            <p>Conheça a história do Xbox</p>
+        </div>
+    </div>
+</div>
